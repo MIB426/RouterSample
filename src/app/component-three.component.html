@@ -1,0 +1,10 @@
+<p>Component Three</p>
+<nav>
+  <a [routerLink]="['child-one']">Child One (Accessing a Parent's Route Parameters)</a>&nbsp;&nbsp;
+  <a [routerLink]="['child-two']">Child Two</a>
+</nav>
+<p>
+    Component Three with route param <b><code>ID: {{ id }}</code></b>
+
+    <router-outlet></router-outlet>
+</p>

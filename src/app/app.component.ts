@@ -14,4 +14,8 @@ export class AppComponent {
     this.router.navigate(['/component-two']);
 
   }
+  ComponentThreeClick() {
+    this.router.navigate(['/component-three', 456]);
+  }
+
 }

@@ -19,13 +19,21 @@
         </ul>
    </div>
   <hr>
+  <h3>Defining Child Routes</h3>
+  <img src='../assets/img/img1.jpg' />
   <nav>
-      <a routerLink="/component-one">Component One</a>&nbsp;<button (click)='ComponentTwoClick()'>Component Two</button>
+      <a routerLink="/component-one">Component One</a>&nbsp;<button (click)='ComponentTwoClick()'>Component Two</button>&nbsp;
+      <a [routerLink]="['/component-three', 123]">Component Three (id: 123)</a>&nbsp;<button (click)="ComponentThreeClick()">Go to Component Three (param: 456)</button>
 
     </nav>
+   
+
     <div style="color: green; margin-top: 1rem;">Outlet:</div>
     <div style="border: 2px solid green; padding: 1rem;">
+
+
       <router-outlet></router-outlet>
+
     </div>
 
 
