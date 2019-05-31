@@ -18,15 +18,32 @@
           <li><strong>children</strong> - array of route definitions objects representing the child routes of this route (covered later in this chapter).</li>
         </ul>
    </div>
+   <div class="success">
+    <p><strong>Auxiliary Routes</strong></p>
+    <p>Angular supports the concept of auxiliary routes, which allow you to set up and navigate
+      multiple independent routes in a single app. Each component has one primary route and
+      zero or more auxiliary outlets. Auxiliary outlets must have unique name within a component.</p>
+      <p>To define the auxiliary route we must first add a named router outlet where contents for the
+        auxiliary route are to be rendered.</p>
+    <p>Each auxiliary route is an independent route which can have:</p>
+      <ul>
+          <li>its own child routes</li>
+          <li>its own auxiliary routes</li>
+          <li>its own route-params</li>
+          <li>its own history stack</li>
+      </ul>
+   </div>
   <hr>
   <h3>Defining Child Routes</h3>
   <img src='../assets/img/img1.jpg' />
   <nav>
       <a routerLink="/component-one">Component One</a>&nbsp;<button (click)='ComponentTwoClick()'>Component Two</button>&nbsp;
-      <a [routerLink]="['/component-three', 123]">Component Three (id: 123)</a>&nbsp;<button (click)="ComponentThreeClick()">Go to Component Three (param: 456)</button>
+      <a [routerLink]="['/component-three', 123]">Component Three (id: 123)</a>&nbsp;<button (click)="ComponentThreeClick()">Go to Component Three (param: 456)</button>&nbsp;
+      <a [routerLink]="['/optional-parameter']">Optiona Parameter (No param)</a>&nbsp;
+      <a [routerLink]="['/optional-parameter']" [queryParams]="{ page: 99 }">Optiona Parameter (Go to Page 99)</a>&nbsp;
+      <a [routerLink]="[{ outlets: { 'sidebar': ['aux-route'] } }]">Auxiliary Routes</a>
 
     </nav>
-   
 
     <div style="color: green; margin-top: 1rem;">Outlet:</div>
     <div style="border: 2px solid green; padding: 1rem;">
@@ -35,5 +52,9 @@
       <router-outlet></router-outlet>
 
     </div>
+    <div style="color: green; margin-top: 1rem;">Sidebar Outlet:</div>
+    <div style="border: 2px solid blue; padding: 1rem;">
+      <router-outlet name="sidebar"></router-outlet>
+    </div>`
 
 

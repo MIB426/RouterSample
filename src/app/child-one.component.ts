@@ -13,10 +13,8 @@ export class ChildOneComponent implements OnInit, OnDestroy {
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.sub = this.router.routerState.parent(this.route)
-      .params.subscribe(params => {
-        this.parentRouteId = +params["id"];
-      });
+    this.sub = this.route.parent.params.subscribe(params => { this.parentRouteId = +params["id"]; });
+
 
   }
   ngOnDestroy() {

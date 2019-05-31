@@ -8,6 +8,9 @@ import { ComponentTwoComponent } from './component-two.component';
 import { ComponentThreeComponent } from './component-three.component';
 import { ChildOneComponent } from './child-one.component';
 import { ChildTwoComponent } from './child-two.component';
+import { OptionalParameterComponent } from './optional-parameter.component';
+import { AuxRouteComponent } from './aux-route.component';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +19,9 @@ import { ChildTwoComponent } from './child-two.component';
     ComponentTwoComponent,
     ComponentThreeComponent,
     ChildOneComponent,
-    ChildTwoComponent
+    ChildTwoComponent,
+    OptionalParameterComponent,
+    AuxRouteComponent
   ],
   imports: [
     BrowserModule,

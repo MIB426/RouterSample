@@ -15,3 +15,9 @@ ul li::before {
   width: 1em; /* Also needed for space (tweak if needed) */
   margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
+a{
+  border:1px solid red;
+ }
+ a:hover{
+  border:1px solid violet;
+ }

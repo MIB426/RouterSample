@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -17,5 +18,8 @@ export class AppComponent {
   ComponentThreeClick() {
     this.router.navigate(['/component-three', 456]);
   }
+
+
+
 
 }
